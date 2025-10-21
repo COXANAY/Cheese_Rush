@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://jx3aoq3jjy2k"]
+
+[ext_resource type="PackedScene" uid="uid://bbsu2ei66qow2" path="res://art/player.glb" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://plgh831d5gpa" path="res://script/player.gd" id="1_g2els"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g2els"]
+height = 2.125
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_g2els")
+
+[node name="Body_player" type="Node3D" parent="."]
+
+[node name="Character" parent="Body_player" instance=ExtResource("1_3vyb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-7.86805e-08, 1.25, 0, -1.8, -5.4639237e-08, 0, 0, 0, 1.8, -0.33, 0.8, 0)
+rotation_order = 0
+shape = SubResource("CapsuleShape3D_g2els")
+debug_color = Color(0.9843137, 0, 0, 1)
