@@ -1,5 +1,6 @@
+res://scenes/main.tscn
+res://script/main.gd
+res://script/enemi.gd
+res://scenes/Enemi.tscn
 res://scenes/player.tscn
 res://script/player.gd
-res://scenes/main.tscn
-res://scenes/Enemi.tscn
-res://script/enemi.gd

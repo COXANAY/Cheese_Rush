@@ -1,5 +1,6 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1761004059
+::res://::1761086798
+README.md::TextFile::-1::1761007261::0::1::::<><><>0<>0<><>::
 ::res://art/::1761002125
 House In a Forest Loop.ogg::AudioStreamOggVorbis::6912470962729766485::1744386698::1761000680::1::::<><><>0<>0<>ca11219f684f6cd2af90d4e6cdaead58<>res://.godot/imported/House In a Forest Loop.ogg-1a6a72ae843ad792b7039931227e8d50.oggvorbisstr::
 mob.glb::PackedScene::9096421071902768825::1761001481::1761001600::1::::<><><>0<>0<>f6bc4afc0d9cdab8fc4b6e67a73fa307<>res://.godot/imported/mob.glb-3afb43c03b9d1598b6af5154e2543eac.scn::uid://dvlbbvsv30gqy::::res://art/mob_hout_baseColor.jpg<>uid://b8ydv3drqxh8x::::res://art/mob_hout_metallicRoughness.png<>uid://bkvvy6bku8qrh::::res://art/mob_hout_normal.png<>uid://dc0fqo521p4g5::::res://art/mob_ijzer_baseColor.jpg<>uid://j6qfsvm8mqtd::::res://art/mob_ijzer_metallicRoughness.png<>uid://b11g6p8mat6bv::::res://art/mob_ijzer_normal.png<>uid://c8fvvx7vwl8lk::::res://art/mob_koper_baseColor.jpg<>uid://b8fv5f3rj53ts::::res://art/mob_koper_metallicRoughness.png<>uid://d2jfdbgwptkfb::::res://art/mob_koper_normal.png
@@ -86,6 +87,11 @@ TextureMaterial_65_baseColor.png::CompressedTexture2D::8598194484335841521::1758
 TextureMaterial_66_baseColor.png::CompressedTexture2D::3558294258754390702::1758802850::1761002143::1::::<><><>0<>0<>f37626ef05f99520053bad0569b1e0a3<>res://.godot/imported/TextureMaterial_66_baseColor.png-2955aab889bf09f5bc97a419c0268d93.s3tc.ctex::
 TextureMaterial_67_baseColor.png::CompressedTexture2D::6260394296218068848::1758802852::1761002143::1::::<><><>0<>0<>7bc93833820028b283e64e7ce56d61be<>res://.godot/imported/TextureMaterial_67_baseColor.png-f550e88b09a96660a7995cd1cdac4130.s3tc.ctex::
 TextureMaterial_baseColor.png::CompressedTexture2D::2355432857683252040::1758802808::1761002143::1::::<><><>0<>0<>e73f882a2bc32d1cd2267c6f1d09e849<>res://.godot/imported/TextureMaterial_baseColor.png-a7d457c713e4aa43919910b61aa60b25.s3tc.ctex::
-::res://scenes/::1761003955
-main.tscn::PackedScene::7947491584365482126::1761002788::0::1::::<><><>0<>0<><>::
-player.tscn::PackedScene::680881118211501272::1761003955::0::1::::<><><>0<>0<><>::uid://bbsu2ei66qow2::::res://art/player.glb
+::res://scenes/::1761086698
+Enemi.tscn::PackedScene::4603184816079385704::1761006494::0::1::::<><><>0<>0<><>::uid://bqs5kep6rq6lj::::res://script/enemi.gd<>uid://d2umyxkxn0lxh::::res://art/mob.glb
+main.tscn::PackedScene::7947491584365482126::1761086698::0::1::::<><><>0<>0<><>::uid://dweya4b43qcvs::::res://script/main.gd<>uid://jx3aoq3jjy2k::::res://scenes/player.tscn
+player.tscn::PackedScene::680881118211501272::1761004844::0::1::::<><><>0<>0<><>::uid://bbsu2ei66qow2::::res://art/player.glb<>uid://plgh831d5gpa::::res://script/player.gd
+::res://script/::1761086687
+enemi.gd::GDScript::3548440583894085803::1761006494::0::1::::<>CharacterBody3D<><>0<>0<><>::
+main.gd::GDScript::8713132856036285060::1761086687::0::1::::<>Node<><>0<>0<><>::
+player.gd::GDScript::1075919390090671350::1761004844::0::1::::<>CharacterBody3D<><>0<>0<><>::

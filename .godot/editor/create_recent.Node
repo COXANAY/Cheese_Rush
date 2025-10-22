@@ -1,4 +1,9 @@
+PathFollow3D
+Path3D
 MeshInstance3D
+Timer
+Node
+VisibleOnScreenNotifier3D
 Node3D
 CollisionShape3D
 CharacterBody3D
