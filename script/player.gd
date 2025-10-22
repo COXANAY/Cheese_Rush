@@ -59,3 +59,12 @@ func _physics_process(delta):
 				collider.squash()
 				target_velocity.y = bounce_impulse
 				break
+
+signal hit
+
+func die():
+	hit.emit()
+	queue_free()
+	
+func _on_mob_detector_body_entered(body):
+	die()

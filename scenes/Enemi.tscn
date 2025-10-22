@@ -6,6 +6,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_qpg7n"]
 
 [node name="Body_mob" type="CharacterBody3D" groups=["mob"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.36829853, 0)
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_gvtn5")

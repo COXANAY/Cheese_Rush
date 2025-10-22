@@ -1,0 +1,121 @@
+[gd_scene load_steps=9 format=3 uid="uid://c070n2svxkos4"]
+
+[ext_resource type="PackedScene" uid="uid://ca2t6oupet2wy" path="res://map/scene.gltf" id="1_y341g"]
+[ext_resource type="PackedScene" uid="uid://bbsu2ei66qow2" path="res://art/player.glb" id="2_6diwj"]
+[ext_resource type="Script" uid="uid://bdcym1hw4w56q" path="res://scenes/main_menu.gd" id="2_l7j8c"]
+[ext_resource type="FontFile" uid="uid://djv2c6qgyyldj" path="res://fonts/River Adventurer.ttf" id="3_gbctg"]
+[ext_resource type="PackedScene" uid="uid://d2umyxkxn0lxh" path="res://art/mob.glb" id="3_udil0"]
+[ext_resource type="PackedScene" uid="uid://bd7gk601uucus" path="res://art/cheese.glb" id="6_f7y13"]
+
+[sub_resource type="Gradient" id="Gradient_y341g"]
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_35p7i"]
+gradient = SubResource("Gradient_y341g")
+fill_from = Vector2(0.35514018, 0.018691588)
+fill_to = Vector2(0.7242991, 0)
+
+[node name="WelcomeScreen" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_y341g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, -5, -72)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.8700099, -0.25, 0.42495027, 0.09914384, 0.93301266, 0.34591585, -0.48296294, -0.25881907, 0.8365163, -5, 25, 11)
+fov = 71.3
+near = 0.072
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.8660254, 0, 0.5, -0.16862157, 0.9414175, 0.29206112, -0.4707088, -0.33724314, 0.8152915, 0, 28.550821, 13)
+light_color = Color(1, 1, 0.8627451, 1)
+light_energy = 1.2
+
+[node name="player" parent="." instance=ExtResource("2_6diwj")]
+transform = Transform3D(0.6333791, 0, -1.0192306, 0, 1.2000002, 0, 1.0192306, 0, 0.6333791, -10.592653, 26.002924, -0.26145458)
+
+[node name="mob2" parent="." instance=ExtResource("3_udil0")]
+transform = Transform3D(-0.6503039, 0.17240202, -0.19334503, 0.16525282, 0.67843753, 0.04913212, 0.19949, 0, -0.6709722, -9.1132555, 21.18299, 2.571125)
+
+[node name="mob" parent="." instance=ExtResource("3_udil0")]
+transform = Transform3D(0.100795396, 0, -0.6927047, 0, 0.6999998, 0, 0.6927047, 0, 0.100795396, -10.623301, 21.056238, 3.2411203)
+
+[node name="MainMenu" type="CanvasLayer" parent="."]
+script = ExtResource("2_l7j8c")
+
+[node name="TextureRect" type="TextureRect" parent="MainMenu"]
+modulate = Color(1, 1, 1, 0.2509804)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_35p7i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu"]
+anchors_preset = -1
+anchor_left = 0.22700001
+anchor_top = 0.47100002
+anchor_right = 0.22700001
+anchor_bottom = 0.47100002
+offset_left = -130.44
+offset_top = -64.34001
+offset_right = 134.56
+offset_bottom = 95.65999
+alignment = 1
+
+[node name="username" type="TextEdit" parent="MainMenu/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+placeholder_text = "Usuário"
+
+[node name="password" type="TextEdit" parent="MainMenu/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+placeholder_text = "Senha"
+
+[node name="Login" type="Button" parent="MainMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 37
+text = "Login"
+
+[node name="Criar" type="Button" parent="MainMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 37
+text = "Criar"
+
+[node name="Label" type="Label" parent="MainMenu"]
+anchors_preset = -1
+anchor_left = 0.223
+anchor_top = 0.35000002
+anchor_right = 0.223
+anchor_bottom = 0.35000002
+offset_left = -161.56
+offset_top = -84.000015
+offset_right = 193.44
+offset_bottom = -21.000015
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_gbctg")
+theme_override_font_sizes/font_size = 45
+text = "CHEESE HUNTER"
+
+[node name="createTable" type="Button" parent="MainMenu"]
+visible = false
+offset_left = 355.0
+offset_top = 279.0
+offset_right = 494.0
+offset_bottom = 345.0
+text = "Create"
+
+[node name="Sketchfab_Scene3" parent="." instance=ExtResource("6_f7y13")]
+transform = Transform3D(-1.9667652, 0.2385018, 0.27377546, 0.28182206, 1.9535714, 0.3226982, -0.2289379, 0.35591382, -1.9547156, -3.584788, 20.873291, 2.9370217)
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("6_f7y13")]
+transform = Transform3D(-0.5497794, 0.03854231, -1.9225652, 0.029824799, 1.9995288, 0.03155648, 1.9227202, -0.019995505, -0.5502247, -5.086686, 20.73741, 3.35822)
+
+[connection signal="button_down" from="MainMenu/VBoxContainer/Login" to="MainMenu" method="_on_login_button_down"]
+[connection signal="button_down" from="MainMenu/VBoxContainer/Criar" to="MainMenu" method="_on_criar_button_down"]
+[connection signal="button_down" from="MainMenu/createTable" to="MainMenu" method="_on_create_table_button_down"]

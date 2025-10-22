@@ -1,6 +1,10 @@
-res://scenes/main.tscn
-res://script/main.gd
-res://script/enemi.gd
 res://scenes/Enemi.tscn
+res://scenes/main.tscn
 res://scenes/player.tscn
 res://script/player.gd
+res://script/main.gd
+res://script/enemi.gd
+res://script/score_label.gd
+res://scenes/music_player.tscn
+res://scenes/welcome_screen.tscn
+res://scenes/main_menu.gd

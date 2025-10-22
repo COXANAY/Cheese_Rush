@@ -1,3 +1,10 @@
+AudioStreamPlayer
+AudioStreamPlayer3D
+Label
+ColorRect
+Control
+CollisionShape3D
+Area3D
 PathFollow3D
 Path3D
 MeshInstance3D
@@ -5,9 +12,4 @@ Timer
 Node
 VisibleOnScreenNotifier3D
 Node3D
-CollisionShape3D
 CharacterBody3D
-Camera3D
-Marker3D
-DirectionalLight3D
-StaticBody3D
