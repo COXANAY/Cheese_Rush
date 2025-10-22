@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=3 uid="uid://djjmv21j1g525"]
+
+[ext_resource type="PackedScene" uid="uid://ca2t6oupet2wy" path="res://map/scene.gltf" id="1_y341g"]
+[ext_resource type="Script" uid="uid://crbmul415oxaj" path="res://main_menu.gd" id="2_35p7i"]
+
+[sub_resource type="Gradient" id="Gradient_y341g"]
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_35p7i"]
+gradient = SubResource("Gradient_y341g")
+fill_from = Vector2(0.35514018, 0.018691588)
+fill_to = Vector2(0.7242991, 0)
+
+[node name="WelcomeScreen" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_y341g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, -5, -72)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.8700099, -0.25, 0.42495027, 0.09914384, 0.93301266, 0.34591585, -0.48296294, -0.25881907, 0.8365163, -5, 25, 11)
+fov = 71.3
+near = 0.072
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 26, 13)
+
+[node name="MainMenu" type="CanvasLayer" parent="."]
+script = ExtResource("2_35p7i")
+
+[node name="TextureRect" type="TextureRect" parent="MainMenu"]
+modulate = Color(1, 1, 1, 0.2509804)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_35p7i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu"]
+anchors_preset = -1
+anchor_left = 0.22700001
+anchor_top = 0.47100002
+anchor_right = 0.22700001
+anchor_bottom = 0.47100002
+offset_left = -130.44
+offset_top = -64.34001
+offset_right = 134.56
+offset_bottom = 95.65999
+alignment = 1
+
+[node name="username" type="TextEdit" parent="MainMenu/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+placeholder_text = "Usuário"
+
+[node name="password" type="TextEdit" parent="MainMenu/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+placeholder_text = "Senha"
+
+[node name="Login" type="Button" parent="MainMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 37
+text = "Login"
+
+[node name="Criar" type="Button" parent="MainMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 37
+text = "Criar"
+
+[node name="Label" type="Label" parent="MainMenu"]
+anchors_preset = -1
+anchor_left = 0.223
+anchor_top = 0.35000002
+anchor_right = 0.223
+anchor_bottom = 0.35000002
+offset_left = -161.56
+offset_top = -84.000015
+offset_right = 193.44
+offset_bottom = -21.000015
+theme_override_font_sizes/font_size = 45
+text = "CHEESE HUNTER"
+
+[node name="createTable" type="Button" parent="MainMenu"]
+visible = false
+offset_left = 355.0
+offset_top = 279.0
+offset_right = 494.0
+offset_bottom = 345.0
+text = "Create"
+
+[connection signal="button_down" from="MainMenu/VBoxContainer/Login" to="MainMenu" method="_on_login_button_down"]
+[connection signal="button_down" from="MainMenu/VBoxContainer/Criar" to="MainMenu" method="_on_criar_button_down"]
+[connection signal="button_down" from="MainMenu/createTable" to="MainMenu" method="_on_create_table_button_down"]
