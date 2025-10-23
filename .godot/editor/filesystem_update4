@@ -1,11 +1,3 @@
+res://script/play_option.gd
 res://scenes/welcome_screen.tscn
-res://scenes/chessecoin.tscn
-res://script/chessecoin.gd
-res://script/main.gd
-res://scenes/main.tscn
-res://script/score_label.gd
-res://script/enemi.gd
-res://script/player.gd
-res://scenes/Enemi.tscn
-res://scenes/player.tscn
-res://NetworkManager.gd
+res://scenes/main_menu.gd

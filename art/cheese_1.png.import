@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4lfakwvpj1yo"
+uid="uid://cabf6umb85wrx"
 path.s3tc="res://.godot/imported/cheese_1.png-22188a63c1afa912602e6fa3b6cab99a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "e9caad0bbc4a40d0674f467d01063820"
 }
 
 [deps]

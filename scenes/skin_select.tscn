@@ -1,0 +1,133 @@
+[gd_scene load_steps=11 format=3 uid="uid://df2qlhw33xn7i"]
+
+[ext_resource type="PackedScene" uid="uid://ca2t6oupet2wy" path="res://map/scene.gltf" id="1_c5gr4"]
+[ext_resource type="PackedScene" uid="uid://bbsu2ei66qow2" path="res://art/player.glb" id="2_42mck"]
+[ext_resource type="PackedScene" uid="uid://d2umyxkxn0lxh" path="res://art/mob.glb" id="3_6pdiu"]
+[ext_resource type="PackedScene" uid="uid://bd7gk601uucus" path="res://art/cheese.glb" id="4_xgc1p"]
+[ext_resource type="Script" uid="uid://by0hu65ndsttw" path="res://script/skinSelect.gd" id="5_ckma1"]
+[ext_resource type="FontFile" uid="uid://djv2c6qgyyldj" path="res://fonts/River Adventurer.ttf" id="6_4y413"]
+[ext_resource type="PackedScene" uid="uid://cwk231w4b3rx" path="res://skins/Soldier_mouse.glb" id="7_jarfs"]
+[ext_resource type="PackedScene" uid="uid://dk1chx371m2ms" path="res://skins/Gold_mouse.glb" id="8_6joo1"]
+
+[sub_resource type="Gradient" id="Gradient_y341g"]
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hf38e"]
+gradient = SubResource("Gradient_y341g")
+fill_from = Vector2(0.35514018, 0.018691588)
+fill_to = Vector2(0.7242991, 0)
+
+[node name="SkinSelect" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_c5gr4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.1936, -10.376432, -64.96847)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.98825043, -0.051684733, -0.14383961, 0.11507871, 0.87095606, 0.4776949, 0.100588456, -0.48863503, 0.8666705, -4.8330965, 19.850363, 15.354111)
+fov = 65.64299
+near = 0.072
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.8660254, -1.2904785e-08, 0.5, -0.16862157, 0.9414176, 0.29206115, -0.4707088, -0.33724317, 0.8152915, -1.8064003, 23.174389, 20.03153)
+light_color = Color(1, 1, 0.8627451, 1)
+light_energy = 1.2
+
+[node name="player" parent="." instance=ExtResource("2_42mck")]
+transform = Transform3D(0.6333791, 0, -1.0192306, 0, 1.2000002, 0, 1.0192306, 0, 0.6333791, -12.399054, 20.626492, 6.770076)
+
+[node name="mob2" parent="." instance=ExtResource("3_6pdiu")]
+transform = Transform3D(-0.6503039, 0.17240202, -0.19334503, 0.16525282, 0.67843753, 0.04913212, 0.19949, 0, -0.6709722, -10.919656, 15.806557, 9.602655)
+
+[node name="mob" parent="." instance=ExtResource("3_6pdiu")]
+transform = Transform3D(0.100795396, 0, -0.6927047, 0, 0.6999998, 0, 0.6927047, 0, 0.100795396, -12.429701, 15.679806, 10.272651)
+
+[node name="Sketchfab_Scene3" parent="." instance=ExtResource("4_xgc1p")]
+transform = Transform3D(-1.9667652, 0.2385018, 0.27377546, 0.28182206, 1.9535714, 0.3226982, -0.2289379, 0.35591382, -1.9547156, -5.3911886, 15.496859, 9.968552)
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("4_xgc1p")]
+transform = Transform3D(-0.5497794, 0.03854231, -1.9225652, 0.029824799, 1.9995288, 0.03155648, 1.9227202, -0.019995505, -0.5502247, -6.8930864, 15.360977, 10.3897505)
+
+[node name="skin" type="CanvasLayer" parent="."]
+script = ExtResource("5_ckma1")
+
+[node name="TextureRect" type="TextureRect" parent="skin"]
+modulate = Color(1, 1, 1, 0.2509804)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_hf38e")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="skin"]
+anchors_preset = -1
+anchor_left = 0.22700001
+anchor_top = 0.47100002
+anchor_right = 0.22700001
+anchor_bottom = 0.47100002
+offset_left = -130.44
+offset_top = -64.34001
+offset_right = 134.56
+offset_bottom = 95.65999
+alignment = 1
+
+[node name="padrao" type="Button" parent="skin/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 37
+text = "Padrão"
+
+[node name="soldier" type="Button" parent="skin/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 37
+text = "Soldier"
+
+[node name="golden" type="Button" parent="skin/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 37
+text = "Golden"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="skin/VBoxContainer"]
+layout_mode = 2
+
+[node name="Selecionar" type="Button" parent="skin/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 37
+text = "Selecionar"
+
+[node name="Voltar" type="Button" parent="skin/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 37
+text = "Voltar
+"
+
+[node name="Label" type="Label" parent="skin"]
+anchors_preset = -1
+anchor_left = 0.223
+anchor_top = 0.35000002
+anchor_right = 0.223
+anchor_bottom = 0.35000002
+offset_left = -161.56
+offset_top = -84.000015
+offset_right = 193.44
+offset_bottom = -21.000015
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_4y413")
+theme_override_font_sizes/font_size = 45
+text = "Selecionar Skin"
+
+[node name="Soldier_mouse" parent="." instance=ExtResource("7_jarfs")]
+transform = Transform3D(0.7288511, 0, -0.9532976, 0, 1.2, 0, 0.9532976, 0, 0.7288511, -2.709, 16.305, 9.128)
+
+[node name="Gold_mouse" parent="." instance=ExtResource("8_6joo1")]
+transform = Transform3D(0.7288511, 0, -0.9532976, 0, 1.2, 0, 0.9532976, 0, 0.7288511, -2.709, 16.305, 9.128)
+
+[node name="Padrao" parent="." instance=ExtResource("2_42mck")]
+transform = Transform3D(0.7291838, 0, -0.95304304, 0, 1.2000002, 0, 0.95304304, 0, 0.7291838, -2.7093525, 16.305042, 9.1284075)
+
+[connection signal="button_down" from="skin/VBoxContainer/padrao" to="skin" method="_on_padrao_button_down"]
+[connection signal="button_down" from="skin/VBoxContainer/soldier" to="skin" method="_on_soldier_button_down"]
+[connection signal="button_down" from="skin/VBoxContainer/golden" to="skin" method="_on_golden_button_down"]
+[connection signal="button_down" from="skin/VBoxContainer/VBoxContainer/Selecionar" to="skin" method="_on_selecionar_button_down"]
+[connection signal="button_down" from="skin/VBoxContainer/VBoxContainer/Voltar" to="skin" method="_on_voltar_button_down"]
