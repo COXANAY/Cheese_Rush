@@ -8,3 +8,5 @@ res://script/score_label.gd
 res://scenes/music_player.tscn
 res://scenes/welcome_screen.tscn
 res://scenes/main_menu.gd
+res://script/play_option.gd
+res://scenes/chessecoin.tscn
