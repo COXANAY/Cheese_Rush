@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 # Parâmetros de movimento
 @export var speed = 14
-@export var jump_impulse = 20
+@export var jump_impulse = 25
 @export var fall_acceleration = 75
 @export var bounce_impulse = 16
 
@@ -56,7 +56,6 @@ func _physics_process(delta):
 		if collider.is_in_group("mob"):
 			# Verifica se o impacto foi de cima
 			if Vector3.UP.dot(collision.get_normal()) > 0.1:
-				collider.squash()
 				target_velocity.y = bounce_impulse
 				break
 

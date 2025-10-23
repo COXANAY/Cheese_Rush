@@ -1,17 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://1msnnnm5bbk1"]
+[gd_scene load_steps=4 format=3 uid="uid://1msnnnm5bbk1"]
 
 [ext_resource type="PackedScene" uid="uid://bd7gk601uucus" path="res://art/cheese.glb" id="1_p28rd"]
+[ext_resource type="Script" uid="uid://bps8qdvi2dk4n" path="res://script/chessecoin.gd" id="1_yuslu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p28rd"]
-size = Vector3(0.7357178, 0.5059204, 0.9736328)
+size = Vector3(1.1270447, 1.018692, 1.9761658)
 
-[node name="Chessecoin" type="CharacterBody3D"]
+[node name="cheesecoin" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15126544, 0)
+script = ExtResource("1_yuslu")
 
 [node name="Chesse_body" type="Node3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="Sketchfab_Scene" parent="Chesse_body" instance=ExtResource("1_p28rd")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022583008, 0.0069274902, 0.013183594)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19792175, 0.011743307, 0.024002075)
 shape = SubResource("BoxShape3D_p28rd")
 debug_color = Color(0, 11.708403, 13.469126, 1)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

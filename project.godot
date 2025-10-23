@@ -23,8 +23,7 @@ NetworkManager="*res://NetworkManager.gd"
 
 [display]
 
-window/size/viewport_width=720
-window/size/viewport_height=540
+window/size/mode=2
 
 [filesystem]
 

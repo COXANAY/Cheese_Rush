@@ -2,6 +2,7 @@ extends Label
 
 var score = 0
 
-func _on_mob_squashed():
-	score += 1
-	text = "Pontuação: %s" % score
+func _on_collectible_collected(points = 1):
+	# O valor padrão 'points = 1' garante que, se for chamado sem argumento, some 1 ponto.
+	score += points
+	text = "Pontuação: " + str(score)

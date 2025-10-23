@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1761176906
+::res://::1761257074
 NetworkManager.gd::GDScript::-1::1761092909::0::1::::<>Node<><>0<>0<><>::
 README.md::TextFile::-1::1761171355::0::1::::<><><>0<>0<><>::
 ::res://addons/::1761092909
@@ -8,7 +8,7 @@ gdsqlite.gdextension::GDExtension::4837341577405836572::1761092909::0::1::::<><>
 godot-sqlite.gd::GDScript::6354497535622739150::1761092909::0::1::::<>EditorPlugin<><>0<>1<><>::
 LICENSE.md::TextFile::-1::1761092909::0::1::::<><><>0<>0<><>::
 plugin.cfg::TextFile::-1::1761092909::0::1::::<><><>0<>0<><>::
-::res://addons/godot-sqlite/bin/::1761175215
+::res://addons/godot-sqlite/bin/::1761257068
 ::res://addons/godot-sqlite/bin/libgdsqlite.ios.template_debug.xcframework/::1761092909
 ::res://addons/godot-sqlite/bin/libgdsqlite.ios.template_debug.xcframework/ios-arm64/::1761092909
 ::res://addons/godot-sqlite/bin/libgdsqlite.ios.template_debug.xcframework/ios-arm64_x86_64-simulator/::1761092909
@@ -25,8 +25,11 @@ plugin.cfg::TextFile::-1::1761092909::0::1::::<><><>0<>0<><>::
 ::res://addons/godot-sqlite/bin/libgodot-cpp.ios.template_release.xcframework/::1761092909
 ::res://addons/godot-sqlite/bin/libgodot-cpp.ios.template_release.xcframework/ios-arm64/::1761092909
 ::res://addons/godot-sqlite/bin/libgodot-cpp.ios.template_release.xcframework/ios-arm64_x86_64-simulator/::1761092909
-::res://art/::1761176573
+::res://art/::1761261048
+chao_01.png::CompressedTexture2D::6327019826273405913::1488707607::1761261063::1::::<><><>0<>0<>0ec7add58316adf1fb2bc975ee63ef48<>res://.godot/imported/chao_01.png-08f8a462b3e85dd1d354da4e95c298f1.s3tc.ctex::
 cheese.glb::PackedScene::2663431130685560482::1761176560::1761176573::1::::<><><>0<>0<>027ca95c8bc49804a34ee5c0fa7fd2fd<>res://.godot/imported/cheese.glb-534e23cc1d01dc3506001d7f60259d3d.scn::uid://cclgbima07bw6::::res://art/cheese_0.png<>uid://4lfakwvpj1yo::::res://art/cheese_1.png
+cheese_0.png::CompressedTexture2D::4936293736466550303::1761176572::1761176573::1::::<><><>0<>0<>11c818babca23a89ac5fd08307501ad4<>res://.godot/imported/cheese_0.png-a6c2c17417023022c6c2862d103be398.s3tc.ctex::
+cheese_1.png::CompressedTexture2D::2058488765955201150::1761176572::1761176573::1::::<><><>0<>0<>090bdbeae026d9e8cf3b59d4934555b8<>res://.godot/imported/cheese_1.png-22188a63c1afa912602e6fa3b6cab99a.s3tc.ctex::
 House In a Forest Loop.ogg::AudioStreamOggVorbis::6912470962729766485::1761171355::1761171479::1::::<><><>0<>0<>ca11219f684f6cd2af90d4e6cdaead58<>res://.godot/imported/House In a Forest Loop.ogg-1a6a72ae843ad792b7039931227e8d50.oggvorbisstr::
 mob.glb::PackedScene::9096421071902768825::1761171355::1761171491::1::::<><><>0<>0<>f6bc4afc0d9cdab8fc4b6e67a73fa307<>res://.godot/imported/mob.glb-3afb43c03b9d1598b6af5154e2543eac.scn::uid://dvlbbvsv30gqy::::res://art/mob_hout_baseColor.jpg<>uid://b8ydv3drqxh8x::::res://art/mob_hout_metallicRoughness.png<>uid://bkvvy6bku8qrh::::res://art/mob_hout_normal.png<>uid://dc0fqo521p4g5::::res://art/mob_ijzer_baseColor.jpg<>uid://j6qfsvm8mqtd::::res://art/mob_ijzer_metallicRoughness.png<>uid://b11g6p8mat6bv::::res://art/mob_ijzer_normal.png<>uid://c8fvvx7vwl8lk::::res://art/mob_koper_baseColor.jpg<>uid://b8fv5f3rj53ts::::res://art/mob_koper_metallicRoughness.png<>uid://d2jfdbgwptkfb::::res://art/mob_koper_normal.png
 mob_hout_baseColor.jpg::CompressedTexture2D::8655999557348696056::1761171355::1761171483::1::::<><><>0<>0<>5fa8edd21848d7a82408ad0bf0a2ac2b<>res://.godot/imported/mob_hout_baseColor.jpg-f393efe7e6061ac8393395bb4e8b21c8.s3tc.ctex::
@@ -39,8 +42,6 @@ mob_koper_baseColor.jpg::CompressedTexture2D::7100708913186477020::1761171355::1
 mob_koper_metallicRoughness.png::CompressedTexture2D::4714303349840626984::1761171355::1761171483::1::::<><><>0<>0<>23892adf83b96f37cc3fa7391a1788cc<>res://.godot/imported/mob_koper_metallicRoughness.png-b7141832dd5afd0e3c4ec8906e741bde.s3tc.ctex::
 mob_koper_normal.png::CompressedTexture2D::9073249234250822043::1761171355::1761171483::1::::<><><>0<>0<>43039524d723ca4511dab404e39ec41a<>res://.godot/imported/mob_koper_normal.png-35c1f0656a92eef7879897742beeb413.s3tc.ctex::
 player.glb::PackedScene::2495031107097377167::1761171355::1761171489::1::::<><><>0<>0<>b1d4bf01bcce7ec1ca17c4e0b8ccc952<>res://.godot/imported/player.glb-08dcfb373480a049995065542e37637b.scn::
-cheese_0.png::CompressedTexture2D::4936293736466550303::1761176572::1761176573::1::::<><><>0<>0<>11c818babca23a89ac5fd08307501ad4<>res://.godot/imported/cheese_0.png-a6c2c17417023022c6c2862d103be398.s3tc.ctex::
-cheese_1.png::CompressedTexture2D::2058488765955201150::1761176572::1761176573::1::::<><><>0<>0<>090bdbeae026d9e8cf3b59d4934555b8<>res://.godot/imported/cheese_1.png-22188a63c1afa912602e6fa3b6cab99a.s3tc.ctex::
 ::res://fonts/::1761173050
 River Adventurer.ttf::FontFile::7835958160295720091::1614183013::1761173050::1::::<><><>0<>0<>9bd9ab4227a31bce482d790e560f5d40<>res://.godot/imported/River Adventurer.ttf-26a68cd063b4e4fbe517ee35f273a6e3.fontdata::
 ::res://map/::1761171487
@@ -115,22 +116,25 @@ TextureMaterial_65_baseColor.png::CompressedTexture2D::8598194484335841521::1761
 TextureMaterial_66_baseColor.png::CompressedTexture2D::3558294258754390702::1761171355::1761171481::1::::<><><>0<>0<>f37626ef05f99520053bad0569b1e0a3<>res://.godot/imported/TextureMaterial_66_baseColor.png-2955aab889bf09f5bc97a419c0268d93.s3tc.ctex::
 TextureMaterial_67_baseColor.png::CompressedTexture2D::6260394296218068848::1761171355::1761171481::1::::<><><>0<>0<>7bc93833820028b283e64e7ce56d61be<>res://.godot/imported/TextureMaterial_67_baseColor.png-f550e88b09a96660a7995cd1cdac4130.s3tc.ctex::
 TextureMaterial_baseColor.png::CompressedTexture2D::2355432857683252040::1761171355::1761171481::1::::<><><>0<>0<>e73f882a2bc32d1cd2267c6f1d09e849<>res://.godot/imported/TextureMaterial_baseColor.png-a7d457c713e4aa43919910b61aa60b25.s3tc.ctex::
-::res://scenes/::1761178123
-Enemi.tscn::PackedScene::4603184816079385704::1761171870::0::1::::<><><>0<>0<><>::uid://bqs5kep6rq6lj::::res://script/enemi.gd<>uid://d2umyxkxn0lxh::::res://art/mob.glb
-main.tscn::PackedScene::7947491584365482126::1761174501::0::1::::<><><>0<>0<><>::uid://u66d5udv2rbw::::res://script/main.gd<>uid://jx3aoq3jjy2k::::res://scenes/player.tscn<>uid://b6t21tjvyuy1u::::res://scenes/Enemi.tscn<>uid://djv2c6qgyyldj::::res://fonts/River Adventurer.ttf<>uid://bniwtsca6avqi::::res://script/score_label.gd
-player.tscn::PackedScene::680881118211501272::1761175859::0::1::::<><><>0<>0<><>::uid://bbsu2ei66qow2::::res://art/player.glb<>uid://plgh831d5gpa::::res://script/player.gd
+::res://scenes/::1761260646
+chessecoin.tscn::PackedScene::1850799292299484570::1761259283::0::1::::<><><>0<>0<><>::uid://bd7gk601uucus::::res://art/cheese.glb<>uid://bps8qdvi2dk4n::::res://script/chessecoin.gd
+Enemi.tscn::PackedScene::4603184816079385704::1761258911::0::1::::<><><>0<>0<><>::uid://bqs5kep6rq6lj::::res://script/enemi.gd<>uid://d2umyxkxn0lxh::::res://art/mob.glb
+main.tscn::PackedScene::7947491584365482126::1761260646::0::1::::<><><>0<>0<><>::uid://u66d5udv2rbw::::res://script/main.gd<>uid://jx3aoq3jjy2k::::res://scenes/player.tscn<>uid://b6t21tjvyuy1u::::res://scenes/Enemi.tscn<>uid://1msnnnm5bbk1::::res://scenes/chessecoin.tscn<>uid://djv2c6qgyyldj::::res://fonts/River Adventurer.ttf<>uid://bniwtsca6avqi::::res://script/score_label.gd<>uid://ca2t6oupet2wy::::res://map/scene.gltf
+main_menu.gd::GDScript::2602595984928539814::1761180778::0::1::::<>CanvasLayer<><>0<>0<><>::
 music_player.tscn::PackedScene::4428283496194121614::1761174931::0::1::::<><><>0<>0<><>::uid://c5qpnfga41t4p::::res://art/House In a Forest Loop.ogg
-main_menu.gd::GDScript::2602595984928539814::1761175349::0::1::::<>CanvasLayer<><>0<>0<><>::
-welcome_screen.tscn::PackedScene::6595165133529072665::1761178123::0::1::::<><><>0<>0<><>::uid://ca2t6oupet2wy::::res://map/scene.gltf<>uid://bbsu2ei66qow2::::res://art/player.glb<>uid://bdcym1hw4w56q::::res://scenes/main_menu.gd<>uid://djv2c6qgyyldj::::res://fonts/River Adventurer.ttf<>uid://d2umyxkxn0lxh::::res://art/mob.glb<>uid://bd7gk601uucus::::res://art/cheese.glb<>uid://cwk231w4b3rx::::res://skins/Soldier_mouse.glb
-::res://script/::1761174931
-enemi.gd::GDScript::3548440583894085803::1761172553::0::1::::<>CharacterBody3D<><>0<>0<><>::
-main.gd::GDScript::1469661774056018692::1761174931::0::1::::<>Node<><>0<>0<><>::
-player.gd::GDScript::1075919390090671350::1761172296::0::1::::<>CharacterBody3D<><>0<>0<><>::
-score_label.gd::GDScript::3316761325496418156::1761173307::0::1::::<>Label<><>0<>0<><>::
-::res://skins/::1761178852
+player.tscn::PackedScene::680881118211501272::1761259572::0::1::::<><><>0<>0<><>::uid://bbsu2ei66qow2::::res://art/player.glb<>uid://plgh831d5gpa::::res://script/player.gd
+welcome_screen.tscn::PackedScene::6595165133529072665::1761257348::0::1::::<><><>0<>0<><>::uid://ca2t6oupet2wy::::res://map/scene.gltf<>uid://bbsu2ei66qow2::::res://art/player.glb<>uid://bdcym1hw4w56q::::res://scenes/main_menu.gd<>uid://djv2c6qgyyldj::::res://fonts/River Adventurer.ttf<>uid://d2umyxkxn0lxh::::res://art/mob.glb<>uid://bd7gk601uucus::::res://art/cheese.glb<>uid://bgdxdh8j3cikk::::res://script/play_option.gd
+::res://script/::1761259213
+enemi.gd::GDScript::3548440583894085803::1761258802::0::1::::<>CharacterBody3D<><>0<>0<><>::
+main.gd::GDScript::1469661774056018692::1761258725::0::1::::<>Node<><>0<>0<><>::
+player.gd::GDScript::1075919390090671350::1761258772::0::1::::<>CharacterBody3D<><>0<>0<><>::
+play_option.gd::GDScript::2815149146087239214::1761179978::0::1::::<>CanvasLayer<><>0<>0<><>::
+chessecoin.gd::GDScript::3478444561711072535::1761258176::0::1::::<>Area3D<><>0<>0<><>::
+score_label.gd::GDScript::3316761325496418156::1761259213::0::1::::<>Label<><>0<>0<><>::
+::res://skins/::1761178859
 Gold_mouse.glb::PackedScene::7914959496388806934::1761178852::1761178859::1::::<><><>0<>0<>cb0505fb3c820b5e72c79cc1978602bb<>res://.godot/imported/Gold_mouse.glb-cbb8ca8a54a74ec235062e1f9ecae270.scn::
-Soldier_mouse_Image_1_3.png::CompressedTexture2D::3833433799418498331::1761178034::1761178036::1::::<><><>0<>0<>3f48463cc80e7a07844de78630f6dc13<>res://.godot/imported/Soldier_mouse_Image_1_3.png-ac8b40b33aef6289d23bc40ee210c255.s3tc.ctex::
-Soldier_mouse_Image_0.png::CompressedTexture2D::5113207649773178081::1761178033::1761178036::1::::<><><>0<>0<>36c1f96118a093fac78cc76646e469c4<>res://.godot/imported/Soldier_mouse_Image_0.png-87be8aacb25f32a90fb61794c287cba5.s3tc.ctex::
-Soldier_mouse_Image_2.png::CompressedTexture2D::4682046070605410436::1761178033::1761178036::1::::<><><>0<>0<>06abfce2e4b69bab59bf8607fd5e14cb<>res://.godot/imported/Soldier_mouse_Image_2.png-c86a75eaadedf8059046f12272f2b3cf.s3tc.ctex::
-Soldier_mouse_Image_1.png::CompressedTexture2D::7508200604125139777::1761178033::1761178033::1::::<><><>0<>0<>1a1c08a8733d8d67997deafc5d69aaf5<>res://.godot/imported/Soldier_mouse_Image_1.png-5b62fee1a3e95ee1a458b8f05fee88c4.ctex::
 Soldier_mouse.glb::PackedScene::186450896085600865::1761178031::1761178036::1::::<><><>0<>0<>8bec92115e65519142ca5256e6ed7b3b<>res://.godot/imported/Soldier_mouse.glb-a25b0697090f4fd572317b1dcc18cac4.scn::uid://ce341vc1vb3kf::::res://skins/Soldier_mouse_Image_0.png<>uid://buu7dhmlyi3al::::res://skins/Soldier_mouse_Image_1_3.png<>uid://b7yau5vilec01::::res://skins/Soldier_mouse_Image_2.png
+Soldier_mouse_Image_0.png::CompressedTexture2D::5113207649773178081::1761178033::1761178036::1::::<><><>0<>0<>36c1f96118a093fac78cc76646e469c4<>res://.godot/imported/Soldier_mouse_Image_0.png-87be8aacb25f32a90fb61794c287cba5.s3tc.ctex::
+Soldier_mouse_Image_1.png::CompressedTexture2D::7508200604125139777::1761178033::1761178033::1::::<><><>0<>0<>1a1c08a8733d8d67997deafc5d69aaf5<>res://.godot/imported/Soldier_mouse_Image_1.png-5b62fee1a3e95ee1a458b8f05fee88c4.ctex::
+Soldier_mouse_Image_1_3.png::CompressedTexture2D::3833433799418498331::1761178034::1761178036::1::::<><><>0<>0<>3f48463cc80e7a07844de78630f6dc13<>res://.godot/imported/Soldier_mouse_Image_1_3.png-ac8b40b33aef6289d23bc40ee210c255.s3tc.ctex::
+Soldier_mouse_Image_2.png::CompressedTexture2D::4682046070605410436::1761178033::1761178036::1::::<><><>0<>0<>06abfce2e4b69bab59bf8607fd5e14cb<>res://.godot/imported/Soldier_mouse_Image_2.png-c86a75eaadedf8059046f12272f2b3cf.s3tc.ctex::

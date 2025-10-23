@@ -1,3 +1,6 @@
+MeshInstance3D
+Timer
+Area3D
 CollisionShape3D
 Node3D
 CharacterBody3D
@@ -7,8 +10,5 @@ AudioStreamPlayer3D
 Label
 ColorRect
 Control
-Area3D
 PathFollow3D
 Path3D
-MeshInstance3D
-Timer

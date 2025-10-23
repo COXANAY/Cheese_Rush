@@ -1,13 +1,18 @@
-[gd_scene load_steps=12 format=3 uid="uid://dlh3a4gqohknu"]
+[gd_scene load_steps=15 format=3 uid="uid://dlh3a4gqohknu"]
 
 [ext_resource type="Script" uid="uid://u66d5udv2rbw" path="res://script/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://jx3aoq3jjy2k" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://b6t21tjvyuy1u" path="res://scenes/Enemi.tscn" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://1msnnnm5bbk1" path="res://scenes/chessecoin.tscn" id="3_tefeu"]
+[ext_resource type="Texture2D" uid="uid://cwe4der31htwj" path="res://art/chao_01.png" id="4_o6xl0"]
 [ext_resource type="FontFile" uid="uid://djv2c6qgyyldj" path="res://fonts/River Adventurer.ttf" id="4_tbgi4"]
 [ext_resource type="Script" uid="uid://bniwtsca6avqi" path="res://script/score_label.gd" id="5_tefeu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o5qli"]
 size = Vector3(60, 2, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tipki"]
+albedo_texture = ExtResource("4_o6xl0")
 
 [sub_resource type="BoxMesh" id="BoxMesh_0wfyh"]
 size = Vector3(60, 2, 60)
@@ -32,6 +37,7 @@ default_font_size = 22
 [node name="Main" type="Node"]
 script = ExtResource("1_0wfyh")
 mob_scene = ExtResource("2_sugp2")
+cheese_scene = ExtResource("3_tefeu")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5424671, 0.4577818, 0.55768085)
@@ -44,6 +50,23 @@ shape = SubResource("BoxShape3D_o5qli")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 0)
+material_override = SubResource("StandardMaterial3D_tipki")
+lod_bias = 0.001
+mesh = SubResource("BoxMesh_0wfyh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.5424671, -37.53899, 0.55768085)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040239334, -2.5905857, -0.2218368)
+shape = SubResource("BoxShape3D_o5qli")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, -4.445175)
+material_override = SubResource("StandardMaterial3D_tipki")
+lod_bias = 0.001
 mesh = SubResource("BoxMesh_0wfyh")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -56,7 +79,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3972869, 0)
 [node name="CameraPivot" type="Marker3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot"]
-transform = Transform3D(1, -1.6313312e-07, 4.371137e-08, 4.3711385e-08, 0.49999988, 0.8660255, -1.6313312e-07, -0.8660255, 0.49999988, -2, 30, 14)
+transform = Transform3D(1, -1.6313312e-07, 4.371137e-08, 4.3711385e-08, 0.49999988, 0.8660255, -1.6313312e-07, -0.8660255, 0.49999988, -1.4041901, 30, 16.38034)
 projection = 1
 fov = 96.498146
 size = 30.0
@@ -87,7 +110,13 @@ skeleton = NodePath("../MeshInstance3D3")
 curve = SubResource("Curve3D_tbgi4")
 
 [node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath"]
-transform = Transform3D(0.9999969, 0, 0.0017094796, 0, 1, 0, -0.0017094796, 0, 0.9999969, -30.941378, 0, 30.040586)
+transform = Transform3D(0.99999607, 0, 0.0017094782, 0, 1, 0, -0.0017094782, 0, 0.99999607, -30.941378, 0, 30.040586)
+
+[node name="SpawnPath" type="Path3D" parent="SpawnPath"]
+curve = SubResource("Curve3D_tbgi4")
+
+[node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath/SpawnPath"]
+transform = Transform3D(0.99999595, 0, 0.001709478, 0, 1, 0, -0.001709478, 0, 0.99999595, -30.941378, 0, 30.040586)
 
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5
@@ -141,5 +170,10 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Pressione Enter para tentar novamente"
 
+[node name="CheeseTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
+[connection signal="timeout" from="CheeseTimer" to="." method="_on_cheese_timer_timeout"]

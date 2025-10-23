@@ -4,11 +4,11 @@
 [ext_resource type="Script" uid="uid://plgh831d5gpa" path="res://script/player.gd" id="1_g2els"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g2els"]
-height = 2.125
+height = 2.1274414
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_g2els"]
-height = 0.54589844
-radius = 1.277832
+height = 1.0765991
+radius = 1.1777344
 
 [node name="Player" type="CharacterBody3D"]
 collision_mask = 6
@@ -20,9 +20,8 @@ script = ExtResource("1_g2els")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-7.86805e-08, 1.25, 0, -1.8, -5.4639237e-08, 0, 0, 0, 1.8, -0.33, 0.8, 0)
+transform = Transform3D(-7.86805e-08, 1.35, 0, -1.8, -5.9010375e-08, 0, 0, 0, 2.1, -0.35407922, 0.7403849, 0)
 rotation_order = 0
-visible = false
 shape = SubResource("CapsuleShape3D_g2els")
 debug_color = Color(0.9843137, 0, 0, 1)
 
@@ -32,8 +31,7 @@ collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MobDetector"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.8, -0.37406087, 0.605639, 0)
-visible = false
+transform = Transform3D(1.2, 0, 0, 0, 2, 0, 0, 0, 1, -0.37406087, 0.85595804, 0)
 shape = SubResource("CylinderShape3D_g2els")
 
 [connection signal="body_entered" from="MobDetector" to="." method="_on_mob_detector_body_entered"]

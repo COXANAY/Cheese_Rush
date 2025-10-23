@@ -16,11 +16,12 @@ script = ExtResource("1_gvtn5")
 [node name="Enemi" parent="Body_mob" instance=ExtResource("1_qpg7n")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(5.49, 0, 0, 0, 0.8, 0, 0, 0, 2.9, 0, 0, 0)
+transform = Transform3D(5.65, 0, 0, 0, 0.9, 0, 0, 0, 3, 0, 0, 0)
 shape = SubResource("BoxShape3D_qpg7n")
 debug_color = Color(0, 1.1830623, 0.218495, 1)
 
 [node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 aabb = AABB(-2.75, -0.4, -1.45, 5.5, 0.3, 2.9)
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_exited"]
