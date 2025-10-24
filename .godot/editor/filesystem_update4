@@ -1,0 +1,5 @@
+res://scenes/welcome_screen.tscn
+res://scenes/main_menu.gd
+res://script/skinSelect.gd
+res://scenes/skin_select.tscn
+res://script/score_label.gd
