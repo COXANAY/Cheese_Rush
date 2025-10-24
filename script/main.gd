@@ -1,44 +1,50 @@
 extends Node
 
 @export var mob_scene: PackedScene
-@export var cheese_scene: PackedScene 
+@export var cheese_scene: PackedScene
+
 func _ready():
-	$UserInterface/Retry.hide()
+	# Pode iniciar timers se quiser começar o jogo imediatamente
+	$MobTimer.start()
+	$CheeseTimer.start()
 
 
 func _on_mob_timer_timeout():
-	# Create a new instance of the Mob scene.
+	# Cria uma nova instância do Mob
 	var mob = mob_scene.instantiate()
 
-	# Choose a random location on the SpawnPath.
-	# We store the reference to the SpawnLocation node.
+	# Escolhe uma posição aleatória no SpawnPath
 	var mob_spawn_location = get_node("SpawnPath/SpawnLocation")
-	# And give it a random offset.
 	mob_spawn_location.progress_ratio = randf()
 
+	# Passa a posição do jogador para o mob
 	var player_position = $Player.position
 	mob.initialize(mob_spawn_location.position, player_position)
 
-	# Spawn the mob by adding it to the Main scene.
+	# Adiciona o mob na cena
 	add_child(mob)
 
-func _on_player_hit():
-	$MobTimer.stop()
-	$UserInterface/Retry.show()
 
-func _unhandled_input(event):
-	if event.is_action_pressed("ui_accept") and $UserInterface/Retry.visible:
-		# This restarts the current scene.
-		get_tree().reload_current_scene()
+func _on_player_hit():
+	# Quando o jogador morre:
+	# 1️⃣ Para os timers
+	$MobTimer.stop()
+	$CheeseTimer.stop()
+
+	# 2️⃣ Troca para a cena de Game Over
+	get_tree().change_scene_to_file("res://scenes/game_over_scene.tscn")
+
 
 func _on_cheese_timer_timeout() -> void:
-	# Cria uma instância do queijo
+	# Cria um novo queijo
 	var cheese = cheese_scene.instantiate()
-	# Define a posição (AJUSTE ESSA POSIÇÃO para onde você quer que o queijo apareça!)
-	# Exemplo simples, use algo mais sofisticado como o SpawnPath do seu mob, se quiser
+
+	# Define posição aleatória no mapa
 	cheese.position = Vector3(randf_range(-10, 10), 0.5, randf_range(-10, 10))
-	# Coneta o sinal 'collected' do queijo ao placar
-	# O .bind(1) passa o valor '1' para a função do placar, adicionando 1 ponto.
-	cheese.collected.connect($UserInterface/ScoreLabel._on_collectible_collected.bind(1))
+
+	# Conecta o sinal 'collected' ao placar (se existir)
+	if has_node("UserInterface/ScoreLabel") and cheese.has_signal("collected"):
+		cheese.collected.connect($UserInterface/ScoreLabel._on_collectible_collected.bind(1))
+
 	# Adiciona o queijo à cena
-	add_child(cheese)# Replace with function body.
+	add_child(cheese)

@@ -124,3 +124,22 @@ func _on_drop_table_button_down() -> void:
 		print("Tabela 'players' deletada com sucesso!")
 	else:
 		print("Erro ao deletar tabela ou tabela não existe.")
+
+
+func _on_sair_button_down() -> void:
+	# 1. Limpa o usuário logado no Singleton
+	NetworkManager.logged_in_username = ""
+	
+	# 2. Esconde o menu de opções (PlayOption)
+	play_option_layer.hide()
+	
+	# 3. Mostra o menu principal (Login/Criação de Conta)
+	main_menu_layer.show()
+	
+	# 4. Limpa os campos de input por segurança
+	if is_instance_valid(username_input):
+		username_input.text = ""
+	if is_instance_valid(password_input):
+		password_input.text = ""
+	
+	print("Usuário deslogado. Retornando ao menu principal.")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://df2qlhw33xn7i"]
+[gd_scene load_steps=13 format=3 uid="uid://df2qlhw33xn7i"]
 
 [ext_resource type="PackedScene" uid="uid://ca2t6oupet2wy" path="res://map/scene.gltf" id="1_c5gr4"]
 [ext_resource type="PackedScene" uid="uid://bbsu2ei66qow2" path="res://art/player.glb" id="2_42mck"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bd7gk601uucus" path="res://art/cheese.glb" id="4_xgc1p"]
 [ext_resource type="Script" uid="uid://by0hu65ndsttw" path="res://script/skinSelect.gd" id="5_ckma1"]
 [ext_resource type="FontFile" uid="uid://djv2c6qgyyldj" path="res://fonts/River Adventurer.ttf" id="6_4y413"]
+[ext_resource type="Script" uid="uid://bniwtsca6avqi" path="res://script/score_label.gd" id="7_42mck"]
 [ext_resource type="PackedScene" uid="uid://cwk231w4b3rx" path="res://skins/Soldier_mouse.glb" id="7_jarfs"]
 [ext_resource type="PackedScene" uid="uid://dk1chx371m2ms" path="res://skins/Gold_mouse.glb" id="8_6joo1"]
 
@@ -16,6 +17,9 @@ colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
 gradient = SubResource("Gradient_y341g")
 fill_from = Vector2(0.35514018, 0.018691588)
 fill_to = Vector2(0.7242991, 0)
+
+[sub_resource type="Theme" id="Theme_6pdiu"]
+default_font_size = 22
 
 [node name="SkinSelect" type="Node3D"]
 
@@ -116,6 +120,26 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_4y413")
 theme_override_font_sizes/font_size = 45
 text = "Selecionar Skin"
+
+[node name="ScoreLabel" type="Label" parent="skin"]
+anchors_preset = -1
+anchor_left = 0.88500005
+anchor_top = 0.053000003
+anchor_right = 0.88500005
+anchor_bottom = 0.053000003
+offset_left = -98.52008
+offset_top = -14.344002
+offset_right = 95.47992
+offset_bottom = 17.655998
+grow_horizontal = 0
+theme = SubResource("Theme_6pdiu")
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_4y413")
+theme_override_font_sizes/font_size = 40
+text = "Pontuação:  0"
+script = ExtResource("7_42mck")
 
 [node name="Soldier_mouse" parent="." instance=ExtResource("7_jarfs")]
 transform = Transform3D(0.7288511, 0, -0.9532976, 0, 1.2, 0, 0.9532976, 0, 0.7288511, -2.709, 16.305, 9.128)

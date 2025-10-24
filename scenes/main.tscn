@@ -110,13 +110,13 @@ skeleton = NodePath("../MeshInstance3D3")
 curve = SubResource("Curve3D_tbgi4")
 
 [node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath"]
-transform = Transform3D(0.99999607, 0, 0.0017094782, 0, 1, 0, -0.0017094782, 0, 0.99999607, -30.941378, 0, 30.040586)
+transform = Transform3D(0.99999565, 0, 0.0017094775, 0, 1, 0, -0.0017094775, 0, 0.99999565, -30.941378, 0, 30.040586)
 
 [node name="SpawnPath" type="Path3D" parent="SpawnPath"]
 curve = SubResource("Curve3D_tbgi4")
 
 [node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath/SpawnPath"]
-transform = Transform3D(0.99999595, 0, 0.001709478, 0, 1, 0, -0.001709478, 0, 0.99999595, -30.941378, 0, 30.040586)
+transform = Transform3D(0.9999955, 0, 0.0017094773, 0, 1, 0, -0.0017094773, 0, 0.9999955, -30.941378, 0, 30.040586)
 
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5
@@ -145,30 +145,6 @@ theme_override_fonts/font = ExtResource("4_tbgi4")
 theme_override_font_sizes/font_size = 30
 text = "Pontuação:  0"
 script = ExtResource("5_tefeu")
-
-[node name="Retry" type="ColorRect" parent="UserInterface"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Label" type="Label" parent="UserInterface/Retry"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Pressione Enter para tentar novamente"
 
 [node name="CheeseTimer" type="Timer" parent="."]
 wait_time = 2.0

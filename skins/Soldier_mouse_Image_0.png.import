@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce341vc1vb3kf"
+uid="uid://bxx778fo7vgub"
 path.s3tc="res://.godot/imported/Soldier_mouse_Image_0.png-87be8aacb25f32a90fb61794c287cba5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "7912f9561a1267843cfbccc4635acd16"
 }
 
 [deps]

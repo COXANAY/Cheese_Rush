@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c070n2svxkos4"]
+[gd_scene load_steps=12 format=3 uid="uid://c070n2svxkos4"]
 
 [ext_resource type="PackedScene" uid="uid://ca2t6oupet2wy" path="res://map/scene.gltf" id="1_y341g"]
 [ext_resource type="PackedScene" uid="uid://bbsu2ei66qow2" path="res://art/player.glb" id="2_6diwj"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d2umyxkxn0lxh" path="res://art/mob.glb" id="3_udil0"]
 [ext_resource type="PackedScene" uid="uid://bd7gk601uucus" path="res://art/cheese.glb" id="6_f7y13"]
 [ext_resource type="Script" uid="uid://bgdxdh8j3cikk" path="res://script/play_option.gd" id="7_0pr2k"]
+[ext_resource type="Script" uid="uid://bniwtsca6avqi" path="res://script/score_label.gd" id="8_8jkbe"]
 
 [sub_resource type="Gradient" id="Gradient_y341g"]
 colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
@@ -15,6 +16,9 @@ colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
 gradient = SubResource("Gradient_y341g")
 fill_from = Vector2(0.35514018, 0.018691588)
 fill_to = Vector2(0.7242991, 0)
+
+[sub_resource type="Theme" id="Theme_qqi17"]
+default_font_size = 22
 
 [node name="WelcomeScreen" type="Node3D"]
 
@@ -47,6 +51,7 @@ transform = Transform3D(-1.9667652, 0.2385018, 0.27377546, 0.28182206, 1.9535714
 transform = Transform3D(-0.5497794, 0.03854231, -1.9225652, 0.029824799, 1.9995288, 0.03155648, 1.9227202, -0.019995505, -0.5502247, -5.086686, 20.73741, 3.35822)
 
 [node name="MainMenu" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("2_l7j8c")
 
 [node name="TextureRect" type="TextureRect" parent="MainMenu"]
@@ -113,6 +118,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="createTable" type="Button" parent="MainMenu"]
+visible = false
 offset_left = 368.0
 offset_top = 221.0
 offset_right = 507.0
@@ -120,6 +126,7 @@ offset_bottom = 287.0
 text = "Create"
 
 [node name="dropTable" type="Button" parent="MainMenu"]
+visible = false
 offset_left = 372.0
 offset_top = 314.0
 offset_right = 511.0
@@ -127,7 +134,6 @@ offset_bottom = 380.0
 text = "Drop"
 
 [node name="PlayOption" type="CanvasLayer" parent="."]
-visible = false
 script = ExtResource("7_0pr2k")
 
 [node name="TextureRect" type="TextureRect" parent="PlayOption"]
@@ -162,33 +168,40 @@ theme_override_font_sizes/font_size = 37
 text = "SKINS
 "
 
+[node name="Sair" type="Button" parent="PlayOption/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 37
+text = "SAIR
+"
+
 [node name="Label" type="Label" parent="PlayOption"]
 anchors_preset = -1
-anchor_left = 0.223
-anchor_top = 0.35000002
-anchor_right = 0.223
-anchor_bottom = 0.35000002
-offset_left = -161.56
-offset_top = -84.000015
-offset_right = 193.44
-offset_bottom = -21.000015
+anchor_left = 0.224
+anchor_top = 0.26900002
+anchor_right = 0.224
+anchor_bottom = 0.26900002
+offset_left = -135.048
+offset_top = -31.312012
+offset_right = 134.952
+offset_bottom = 31.687988
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_gbctg")
 theme_override_font_sizes/font_size = 45
-text = "CHEESE HUNTER"
+text = "CHEESE RUSH"
 
 [node name="user" type="Label" parent="PlayOption"]
 anchors_preset = -1
-anchor_left = 0.223
-anchor_top = 0.35000002
-anchor_right = 0.223
-anchor_bottom = 0.35000002
-offset_left = 226.44
-offset_top = -174.00002
-offset_right = 581.44
-offset_bottom = -111.000015
+anchor_left = 0.164
+anchor_top = 0.947
+anchor_right = 0.164
+anchor_bottom = 0.947
+offset_left = -156.92801
+offset_top = -31.656006
+offset_right = 198.07199
+offset_bottom = 31.343994
+grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -204,9 +217,30 @@ offset_right = 494.0
 offset_bottom = 345.0
 text = "Create"
 
+[node name="ScoreLabel" type="Label" parent="PlayOption"]
+anchors_preset = -1
+anchor_left = 0.88500005
+anchor_top = 0.053000003
+anchor_right = 0.88500005
+anchor_bottom = 0.053000003
+offset_left = -98.52008
+offset_top = -14.344002
+offset_right = 95.47992
+offset_bottom = 17.655998
+grow_horizontal = 0
+theme = SubResource("Theme_qqi17")
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_gbctg")
+theme_override_font_sizes/font_size = 40
+text = "Pontuação:  0"
+script = ExtResource("8_8jkbe")
+
 [connection signal="button_down" from="MainMenu/VBoxContainer/Login" to="MainMenu" method="_on_login_button_down"]
 [connection signal="button_down" from="MainMenu/VBoxContainer/Criar" to="MainMenu" method="_on_criar_button_down"]
 [connection signal="button_down" from="MainMenu/createTable" to="MainMenu" method="_on_create_table_button_down"]
 [connection signal="button_down" from="MainMenu/dropTable" to="MainMenu" method="_on_drop_table_button_down"]
 [connection signal="button_down" from="PlayOption/VBoxContainer/Jogar" to="PlayOption" method="_on_jogar_button_down"]
 [connection signal="button_down" from="PlayOption/VBoxContainer/Skins" to="PlayOption" method="_on_skins_button_down"]
+[connection signal="button_down" from="PlayOption/VBoxContainer/Sair" to="MainMenu" method="_on_sair_button_down"]
