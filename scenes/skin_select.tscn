@@ -79,12 +79,12 @@ text = "Padrão"
 [node name="soldier" type="Button" parent="skin/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 37
-text = "Soldier"
+text = "Soldier 50 🧀"
 
 [node name="golden" type="Button" parent="skin/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 37
-text = "Golden"
+text = "Golden 100 🧀"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="skin/VBoxContainer"]
 layout_mode = 2
